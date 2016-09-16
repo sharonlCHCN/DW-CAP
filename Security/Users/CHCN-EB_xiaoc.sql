@@ -1,0 +1,5 @@
+IF NOT EXISTS (SELECT * FROM master.dbo.syslogins WHERE loginname = N'CHCN-EB\xiaoc')
+CREATE LOGIN [CHCN-EB\xiaoc] FROM WINDOWS
+GO
+CREATE USER [CHCN-EB\xiaoc] FOR LOGIN [CHCN-EB\xiaoc]
+GO
